@@ -5,6 +5,7 @@ const companies = [
     description: "An AI robotics company developing autonomous systems for flexible industrial work.",
     url: "https://polybot-careers.notion.site/landing-page",
     logo: "assets/polybot.png",
+    logoClass: "logo-wide",
     roles: ["Lead Mechatronics Engineer"],
   },
   {
@@ -12,7 +13,8 @@ const companies = [
     location: "Tübingen / Remote",
     description: "AI security research and engineering for systems that can find, test and help fix vulnerabilities.",
     url: "https://expsec.ai/careers/",
-    logo: "assets/expsec.png",
+    logo: "assets/expsec-logo.svg",
+    logoClass: "logo-dark",
     roles: ["Member of Technical Staff", "Research Intern"],
   },
   {
@@ -20,7 +22,7 @@ const companies = [
     location: "Berlin / Tübingen · Hybrid",
     description: "Generative audio models that create realistic sound, speech and music directly from video.",
     url: "https://jobs.ashbyhq.com/mirelo",
-    logo: "assets/mirelo.webp",
+    logo: "assets/mirelo-logo.svg",
     roles: [
       "Research Scientist - Model Team",
       "Research Scientist - Audio Codec",
@@ -38,6 +40,7 @@ const companies = [
     description: "Physical AI that lets robots learn dexterous industrial tasks instead of relying on rigid automation.",
     url: "https://oktonex.notion.site/careers-at-oktonex",
     logo: "assets/oktonex.png",
+    logoClass: "logo-dark",
     roles: [
       "Founding Research Engineer, Robot Learning (m/w/d)",
       "Founding Research Scientist, Robot Learning (m/w/d)",
@@ -49,7 +52,7 @@ const companies = [
     location: "Tübingen",
     description: "An open research lab building robust, safe and scalable physical AI.",
     url: "https://kesai.eu/join/",
-    logo: "assets/kesai.jpg",
+    logo: "assets/kesai-logo.png",
     roles: [
       "Technical Staff: Research Scientist",
       "Technical Staff: Research Engineer",
@@ -63,6 +66,7 @@ const companies = [
     description: "AI-driven revenue and process management that helps hospitals spend more time caring for patients.",
     url: "https://calliora.jobs.personio.com/?language=en",
     logo: "assets/calliora.png",
+    logoClass: "logo-wide",
     roles: ["Founder's Associate", "Founding Growth", "Open Application", "Product Engineer", "Value Engineering Intern"],
   },
   {
@@ -70,7 +74,7 @@ const companies = [
     location: "Tübingen / Cologne · Hybrid",
     description: "AI-powered visual quality control that helps manufacturers detect defects and reduce scrap.",
     url: "https://careers.maddox.ai/jobs",
-    logo: "assets/maddox.jpg",
+    logo: "assets/maddox-logo.svg",
     roles: [
       "HR & Talent Acquisition Manager - Intern / Working Student",
       "Business Development Intern (m/w/d)",
@@ -90,7 +94,8 @@ const companies = [
     location: "Tübingen / Munich",
     description: "A frontier AI lab building differentiable scientific simulators for complex physical systems.",
     url: "https://www.feyer.ai/jobs",
-    logo: "assets/feyer.webp",
+    logo: "assets/feyer-logo.webp",
+    logoClass: "logo-wide",
     roles: ["Simulation Engineer | Optics", "Simulation Engineer | Particle Dynamics", "Simulation Engineer | Quantum"],
   },
   {
@@ -98,7 +103,8 @@ const companies = [
     location: "Tübingen",
     description: "A foundation-model lab developing general-purpose physical intelligence for robots and embodied systems.",
     url: "https://onticlabs.notion.site/team-careers",
-    logo: "assets/ontic.png",
+    logo: "assets/ontic-logo.svg",
+    logoClass: "logo-dark",
     roles: [
       "Research Scientist - World Models, Robotics and 3D Humans",
       "Head of Engineering",
@@ -111,7 +117,8 @@ const companies = [
     location: "Tübingen · On-site",
     description: "Optical material intelligence that makes construction and recycling waste streams measurable in real time.",
     url: "https://de.indeed.com/viewjob?jk=fafc603661b2c4e4",
-    logo: "assets/optocycle.png",
+    logo: "assets/optocycle-logo.svg",
+    logoClass: "logo-dark",
     roles: ["Application Engineer (m/w/d)"],
   },
   {
@@ -119,7 +126,7 @@ const companies = [
     location: "Berlin / Freiburg / New York",
     description: "A frontier AI lab building foundation models for the world's most important structured data.",
     url: "https://jobs.ashbyhq.com/prior-labs",
-    logo: "assets/tabularis.png",
+    logo: "assets/prior-logo.svg",
     roles: [
       { title: "Research Scientist, Foundation Model", url: "https://jobs.ashbyhq.com/prior-labs/b37463f2-775d-42e0-8c58-4ec26927534b" },
       { title: "Research Engineer, Foundation Model", url: "https://jobs.ashbyhq.com/prior-labs/a1d005f1-732d-41c1-bd23-4e37b4ecdc7b" },
@@ -153,6 +160,7 @@ const companies = [
     description: "A research lab building matter-specific AI for high-stakes knowledge work, starting with law.",
     url: "https://grubel.ai/#careers",
     logo: "assets/grubel.png",
+    logoClass: "logo-wide",
     roles: ["Founding Legal Engineer", "Founding Research Engineer or Research Scientist", "Chief of Staff or Founders Associate"],
   },
   {
@@ -217,7 +225,7 @@ function render() {
       <article class="company-section${company.volunteer ? " volunteer-section" : ""}">
         <div class="company-overview">
           <div class="company-identity">
-            <img class="company-logo" src="${company.logo}" alt="">
+            <img class="company-logo ${company.logoClass || ""}" src="${company.logo}" alt="${company.name} logo">
             <h3>${company.name}</h3>
           </div>
           <p class="company-description">${company.description}</p>

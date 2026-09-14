@@ -261,6 +261,17 @@ select:focus {
   border-radius: 4px;
 }
 
+.company-logo.logo-wide {
+  width: 92px;
+  padding: 8px;
+}
+
+.company-logo.logo-dark {
+  padding: 9px;
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
 .company-section h3 {
   margin: 0;
   color: var(--navy);
