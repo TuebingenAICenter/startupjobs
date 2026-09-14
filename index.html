@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123a5a">
+  <meta name="description" content="Open roles at AI startups from the Tübingen ecosystem.">
+  <title>Open Roles | Tübingen AI Center</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="jobs.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Tübingen AI Center venture ecosystem">
+      <img src="assets/tueai.svg" alt="Tübingen AI Center">
+    </a>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Tübingen AI venture ecosystem</p>
+      <h1 id="page-title"><span id="position-count">64</span> open<br>positions</h1>
+      <p class="intro-line">From <strong id="startup-count">13</strong> Tübingen AI startups</p>
+      <p class="intro-copy">Find internships, working student roles, graduate jobs and experienced positions from teams building the next generation of AI.</p>
+    </section>
+
+    <section class="controls" aria-label="Find a role">
+      <div class="controls-inner">
+        <label class="search-field">
+          <span>Search roles or companies</span>
+          <input id="search" type="search" placeholder="Try “research”, “robotics” or “intern”" autocomplete="off">
+        </label>
+        <label class="company-field">
+          <span>Company</span>
+          <select id="company-filter">
+            <option value="all">All companies</option>
+          </select>
+        </label>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filter by role type">
+        <button class="filter is-active" type="button" data-filter="all">All</button>
+        <button class="filter" type="button" data-filter="technical">Technical</button>
+        <button class="filter" type="button" data-filter="business">Business</button>
+        <button class="filter" type="button" data-filter="early-career">Early career</button>
+        <button class="filter" type="button" data-filter="volunteer">Volunteer</button>
+      </div>
+    </section>
+
+    <section class="results" aria-labelledby="results-title">
+      <div class="results-heading">
+        <h2 id="results-title">Startups hiring now</h2>
+        <p id="result-count" aria-live="polite"></p>
+      </div>
+      <div id="job-board"></div>
+      <div id="empty-state" class="empty-state" hidden>
+        <h2>No matching roles</h2>
+        <p>Try a broader search or select a different role type.</p>
+      </div>
+    </section>
+
+    <section class="submit-role">
+      <div>
+        <p class="eyebrow">For founders and hiring teams</p>
+        <h2>Add an open role</h2>
+        <p>Is your Tübingen AI startup hiring? Send us the role and company careers link.</p>
+      </div>
+      <a class="primary-action" href="mailto:transfer@tuebingen.ai?subject=Add%20a%20startup%20role">Submit a role <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://transfer.tuebingen.ai">transfer.tuebingen.ai</a>
+    <img class="footer-cube" src="assets/tueai.svg" alt="">
+  </footer>
+</body>
+</html>
