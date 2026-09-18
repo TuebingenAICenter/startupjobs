@@ -164,6 +164,15 @@ const companies = [
     roles: ["Founding Legal Engineer", "Founding Research Engineer or Research Scientist", "Chief of Staff or Founders Associate"],
   },
   {
+    name: "Epic Games Research",
+    location: "Tübingen",
+    description: "Epic Games' Tübingen research team develops AI for realistic digital humans, animation and embodied interaction.",
+    url: "https://www.epicgames.com/site/earlycareers",
+    logo: "assets/epic-games.png",
+    logoClass: "logo-dark",
+    roles: ["Research Internship - details forthcoming"],
+  },
+  {
     name: "KI macht Schule",
     location: "Germany-wide · Volunteer",
     description: "A nonprofit education initiative helping students understand, use and critically discuss artificial intelligence.",
